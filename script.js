@@ -52,8 +52,5 @@ const root = new Vue({
           this.currentIndex = this.pictures.length - 1;
           }
         },
-      gotoSame(){
-        
-      }
     }
   })
