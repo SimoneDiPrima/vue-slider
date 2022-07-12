@@ -42,13 +42,13 @@ const root = new Vue({
     methods:{
       gotoNext(){
     this.currentIndex++;
-  if(currentIndex=== this.pictures.length -1 ){
+  if(this.currentIndex === this.pictures.length -1 ){
     this.currentIndex === 0;
   }
       },
       gotoPrev(){
    this.currentIndex--;
-  if(currentIndex=== 0){
+  if(this.currentIndex=== 0){
     this.currentIndex === this.pictures.length - 1;
   }
   
