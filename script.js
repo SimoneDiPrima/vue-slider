@@ -3,7 +3,7 @@ const root = new Vue({
    
     data:{
       currentIndex: 0,
-       pictures :[
+      pictures :[
         {
            url: 'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg',
           title: 'Svezia',
@@ -38,20 +38,22 @@ const root = new Vue({
          },
        ]
   
-    },
+        },
     methods:{
       gotoNext(){
-    this.currentIndex++;
-  if(this.currentIndex > this.pictures.length -1){
-    this.currentIndex = 0;
-  }
+      this.currentIndex++;
+      if(this.currentIndex > this.pictures.length -1){
+      this.currentIndex = 0;
+        }
       },
       gotoPrev(){
-   this.currentIndex--;
-  if(this.currentIndex < 0){
-    this.currentIndex = this.pictures.length - 1;
-  }
-  
+        this.currentIndex--;
+        if(this.currentIndex < 0){
+          this.currentIndex = this.pictures.length - 1;
+          }
+        },
+      gotoSame(){
+        
       }
     }
   })

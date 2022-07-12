@@ -32,12 +32,12 @@
                         </figure>
                     </div>
                     <i class="bi bi-arrow-right-square" id="rightarrow" v-on:click="gotoNext"></i>
-                   
+                    <div id="thumbnails" class="mx-auto">
+                        <img :src="pic.url" v-for="(pic,index) in pictures" :alt="pic.title" class="rounded-pill"
+                        :class ="currentIndex === index ? `active` : ` `"  >
+                    </div>
                 </div>
-                <div id="thumbnails" class="mx-auto">
-                   <img :src="pic.url" v-for="(pic,index) in pictures" :alt="pic.title" 
-                   :class ="currentIndex === index ? `active` : ` `" >
-                </div>
+               
             </div>
         </div>
     </div>

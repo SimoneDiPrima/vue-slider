@@ -49,8 +49,9 @@
 }
 #thumbnails img{
     height:50px;
-    width:calc(90% / 5);
+    width:calc(100% / 5);
     filter: grayscale(1);
+    padding:5px;
 }
 #thumbnails img.active{
    filter: grayscale(0);
