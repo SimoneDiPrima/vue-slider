@@ -23,7 +23,7 @@
                         <i class="bi bi-arrow-left-square" ></i>
                     </div>
                     <div class="gallery">
-                        <figure v-for="(pic,index) in pictures" :class ="currentIndex === index ? `active` : ` `">
+                        <figure v-for="(pic,index) in pictures" :class ="{`active`: currentIndex === index }">
                             <img :src="pic.url" :alt="pic.title" />
                             <figcaption class="text-white">
                                 <h3>{{ pic.title }}</h2>
@@ -36,7 +36,7 @@
                 </div>
                 <div id="thumbnails" class="mx-auto">
                    <img :src="pic.url" v-for="(pic,index) in pictures" :alt="pic.title" 
-                   :class ="currentIndex === index ? `active` : ` `" >
+                   :class ="{`active`: currentIndex === index }" >
                 </div>
             </div>
         </div>
